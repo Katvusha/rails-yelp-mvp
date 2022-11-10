@@ -1,0 +1,12 @@
+<%= simple_form_for(@restaurant) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :category, as: :select, collection: %w[Chinese Italian Japanese French Belgian], prompt: 'Select categories' %>
+  <%= f.input :address %>
+  <%= f.input :phone_number %>
+
+  <%= f.submit %>
+<% end %>
+
+<br>
+
+<h4><%= link_to "Click here to return", restaurants_path %></h4>

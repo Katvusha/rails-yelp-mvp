@@ -13,7 +13,6 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to restaurant_path(@restaurant)
     else
-      pp @review.errors
       render :new, status: :unprocessable_entity
     end
   end
